@@ -10,3 +10,9 @@ git add .
 git commit -m 'my first sass commit'
 
 git push
+
+---
+
+Notes:
+
+Mixin: re-usable code

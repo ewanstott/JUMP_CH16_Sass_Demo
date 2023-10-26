@@ -1,3 +1,17 @@
-div {
-  color: green;
+.other, .error, .message {
+  background-color: red;
+  color: white;
+}
+
+.error, .message {
+  margin: 20px;
+  padding: 20px;
+}
+
+.message {
+  background-color: red;
+}
+
+.other {
+  width: 500px;
 }/*# sourceMappingURL=styles.css.map */

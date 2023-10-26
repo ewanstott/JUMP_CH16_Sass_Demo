@@ -1,3 +1,121 @@
-div {
-  color: green;
+// EXTEND EXAMPLE (Extend merges rules into min output - writes most efficient code!)
+
+%important {
+  background-color: red;
+  color: white;
 }
+
+%spacing {
+  margin: 20px;
+  padding: 20px;
+}
+
+.message {
+  @extend %important;
+  @extend %spacing;
+  background-color: red;
+}
+
+.error {
+  @extend %important;
+  @extend %spacing;
+}
+.other {
+  @extend%important;
+  width: 500px;
+}
+
+// MIXIN EXAMPLE 5
+
+// @mixin flex($gap) {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   gap: $gap;
+// }
+
+// .flex-container {
+//   @include flex(10px);
+// }
+
+// MIXIN EXAMPLE 4
+
+// @mixin demo($url) {
+//   background-image: url(#{$url});
+// }
+
+// .img {
+//   @include demo("hello.png");
+// }
+
+// MIXIN EXAMPLE 3
+
+// @mixin spacing($property, $key) {
+//   #{$property}-top: $key;
+//   #{$property}-bottom: $key;
+// }
+
+// div {
+//   @include spacing(padding, 20px);
+// }
+
+// MIXIN Example 2
+// @mixin padding($padding) {
+//   padding-top: $padding;
+//   padding-bottom: $padding;
+//   padding-left: $padding;
+//   padding-right: $padding;
+// }
+
+// div {
+//   @include padding(20px);
+// }
+
+// .important {
+//   @include padding(100px);
+// }
+
+// MIXIN EXAMPLE 1
+//   @mixin spacing {
+//   padding: 20px;
+//   margin: 10px;
+//   margin-bottom: 15px;
+//   margin-top: 50px;
+// }
+
+// @mixin sizing {
+//   font-size: 2rem;
+//   height: 100px;
+//   width: 100px;
+// }
+
+// @mixin spacingAndSizing {
+//   @include spacing;
+//   @include sizing;
+// }
+
+// div,
+// .important {
+//   @include spacingAndSizing;
+//   width: 125px;
+// }
+
+// .important {
+//   @include spacingAndSizing;
+//   width: 125px;
+// }
+
+// div {
+//   @include spacing;
+//   background-color: green;
+// }
+
+// p {
+//   @include spacing;
+//   color: purple;
+// }
+
+// .important {
+//   @include spacing;
+//   display: flex;
+// }
